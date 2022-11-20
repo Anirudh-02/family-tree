@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --app-display: block;
+  --print-tree-display: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.print {
+  display: none;
+}
+
+@media print {
+  .App {
+    display: var(--app-display);
+  }
+
+  .print {
+    display: var(--print-tree-display);
+  }
+}
